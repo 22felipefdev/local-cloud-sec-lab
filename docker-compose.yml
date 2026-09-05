@@ -1,0 +1,9 @@
+
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:3.8.0
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      - SERVICES=s3,dynamodb,sts,iam,ec2
