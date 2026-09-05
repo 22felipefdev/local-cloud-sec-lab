@@ -54,8 +54,8 @@ resource "aws_subnet" "app_subnet" {
   cidr_block = "10.0.1.0/24"
 
   tags = {
-    Name = "subnet-app-local"
-	Environment = "LocalStack"
-	ManagedBy = "Github-Actions"
+    Name        = "subnet-app-local"
+    Environment = "LocalStack"
+    ManagedBy   = "Github-Actions"
   }
 }
