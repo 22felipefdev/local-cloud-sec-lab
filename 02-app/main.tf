@@ -55,5 +55,7 @@ resource "aws_subnet" "app_subnet" {
 
   tags = {
     Name = "subnet-app-local"
+	Environment = "LocalStack"
+	ManagedBy = "Github-Actions"
   }
 }
