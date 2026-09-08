@@ -27,8 +27,16 @@ jobs:
         with:
             fetch-depth: 0
       
-      - name: GitLeaks
+      - name: Run GitLeaks action
         uses: gitleaks/gitleaks-action@v3
+        
+      - name: Run Checkov action
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+            directory: 02-app
+            framework: terraform
+            skip_check: CKV2_AWS_11,CKV2_AWS_12
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
