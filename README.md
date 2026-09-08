@@ -3,7 +3,6 @@
 ![Terraform](https://img.shields.io/badge/Terraform-v1.9.0-623CE4?logo=terraform&logoColor=white)
 ![LocalStack](https://img.shields.io/badge/LocalStack-v3.8.0-0052CC?logo=localstack&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 Laboratório prático de **Infraestrutura como Código (IaC)** com **Terraform**, **LocalStack** e **GitHub Actions**. Este projeto implementa uma esteira automatizada de CI/CD alinhada às melhores práticas de **Shift-Left**, segurança cibernética e governança em ambientes de nuvem emulados.
 
