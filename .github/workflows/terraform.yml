@@ -37,6 +37,18 @@ jobs:
             directory: 02-app
             framework: terraform
             skip_check: CKV2_AWS_11,CKV2_AWS_12
+      - name: Run Trivy action
+        uses: aquasecurity/trivy-action@master
+            with:
+            image-ref: 'localstack/localstack:latest'
+            format: 'sarif'
+            output: 'trivy-results.sarif'
+            severity: 'CRITICAL,HIGH'
+       - name: Upload Trivy scan results to GitHub Security tab
+            uses: github/codeql-action/upload-sarif@v3
+            if: always()
+            with:
+                sarif_file: 'trivy-results.sarif'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
